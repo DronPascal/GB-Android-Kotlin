@@ -1,4 +1,4 @@
-package com.example.androidwithkotlin.model
+package com.test.weather.model.entities
 
 data class City(
     val city: String,

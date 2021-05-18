@@ -1,4 +1,4 @@
-package com.example.androidwithkotlin.view
+package com.test.weather.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.androidwithkotlin.R
-import com.example.androidwithkotlin.databinding.MainFragmentBinding
-import com.example.androidwithkotlin.model.Weather
 import com.example.androidwithkotlin.viewmodel.AppState
 import com.example.androidwithkotlin.viewmodel.MainViewModel
 import com.google.android.material.snackbar.Snackbar
+import com.test.weather.R
+import com.test.weather.databinding.MainFragmentBinding
+import com.test.weather.model.entities.Weather
 
 class MainFragment : Fragment() {
 
@@ -25,7 +25,7 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = MainFragmentBinding.inflate(inflater, container, false)
-        return binding.getRoot()
+        return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -39,14 +39,14 @@ class MainFragment : Fragment() {
         when (appState) {
             is AppState.Success -> {
                 val weatherData = appState.weatherData
-                binding.loadingLayout.visibility = View.GONE
+                binding.loadingView.visibility = View.GONE
                 setData(weatherData)
             }
             is AppState.Loading -> {
-                binding.loadingLayout.visibility = View.VISIBLE
+                binding.loadingView.visibility = View.VISIBLE
             }
             is AppState.Error -> {
-                binding.loadingLayout.visibility = View.GONE
+                binding.loadingView.visibility = View.GONE
                 Snackbar
                     .make(binding.mainView, getString(R.string.error), Snackbar.LENGTH_INDEFINITE)
                     .setAction(getString(R.string.reload)) { viewModel.getWeatherFromLocalSource() }

@@ -1,6 +1,6 @@
 package com.example.androidwithkotlin.viewmodel
 
-import com.example.androidwithkotlin.model.Weather
+import com.test.weather.model.entities.Weather
 
 sealed class AppState {
     data class Success(val weatherData: Weather) : AppState()
