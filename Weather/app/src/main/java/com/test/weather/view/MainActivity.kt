@@ -7,7 +7,7 @@ import androidx.navigation.fragment.NavHostFragment
 import com.test.weather.R
 
 class MainActivity : AppCompatActivity() {
-
+ 
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
