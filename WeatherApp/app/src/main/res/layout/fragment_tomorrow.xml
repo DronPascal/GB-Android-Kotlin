@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/big_padding"
+    android:paddingVertical="@dimen/default_padding"
+    tools:context=".ui.main.TodayFragment">
+
+    <TextView
+        android:id="@+id/textviewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="вторник, 15 июня" />
+
+    <TextView
+        android:id="@+id/textviewDayNightTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:textAppearance="?attr/textAppearanceBody1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textviewTime"
+        tools:text="Днем 27° ∙ Ночью 16°" />
+
+    <TextView
+        android:id="@+id/textviewWeather"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/default_margin"
+        app:layout_constraintRight_toLeftOf="@id/imageWeather"
+        app:layout_constraintTop_toBottomOf="@id/textviewDayNightTemp"
+        tools:text="Местами грозы" />
+
+    <ImageView
+        android:id="@+id/imageWeather"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/weather_icon_description"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@id/textviewWeather"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textviewDayNightTemp"
+        tools:src="@drawable/ic_weather_sun" />
+
+
+    <ImageView
+        android:id="@+id/imageUmbrella"
+        android:layout_width="@dimen/default_size"
+        android:layout_height="@dimen/default_size"
+        android:contentDescription="@string/umbrella_icon_description"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:tint="?attr/colorOnSurface"
+        tools:src="@drawable/ic_umbrella" />
+
+    <TextView
+        android:id="@+id/textviewPrecipitation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_margin"
+        android:textAppearance="?attr/textAppearanceBody2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/imageUmbrella"
+        tools:text="Вероятность осадков: 70%" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

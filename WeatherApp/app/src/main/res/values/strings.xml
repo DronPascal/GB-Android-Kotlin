@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="tab_text_1">Today</string>
+    <string name="tab_text_2">Tomorrow</string>
+    <string name="tab_text_3">10 days</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!--  Today Fragment  -->
+    <string name="degree_superior"><sup>℃</sup></string>
+    <string name="weather_icon_description">Weather icon</string>
+    <string name="umbrella_icon_description">Umbrella icon</string>
+    <string name="fab_icon_description">fab_icon_description</string>
+
+</resources>
