@@ -1,4 +1,4 @@
-package com.pascal.weatherapp.ui.main
+package com.pascal.weatherapp.ui.main.fragments
 //
 //import android.os.Bundle
 //import androidx.fragment.app.Fragment

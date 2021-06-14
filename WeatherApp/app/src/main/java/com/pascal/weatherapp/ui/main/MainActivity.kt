@@ -1,4 +1,4 @@
-package com.pascal.weatherapp
+package com.pascal.weatherapp.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayoutMediator
 import com.pascal.weatherapp.databinding.ActivityMainBinding
-import com.pascal.weatherapp.ui.main.FragmentsPagerAdapter
+import com.pascal.weatherapp.ui.main.fragments.FragmentsPagerAdapter
 import java.lang.Thread.sleep
 
 class MainActivity : AppCompatActivity() {
@@ -52,6 +52,8 @@ class MainActivity : AppCompatActivity() {
                 //mainViewModel.refresh()}
             }.start()
         }
+        //mainViewModel.
+        binding.swiperefresh.isRefreshing = false;
     }
 
     private fun initFab() {

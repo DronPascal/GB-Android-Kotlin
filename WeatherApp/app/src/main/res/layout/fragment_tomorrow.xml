@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:paddingHorizontal="@dimen/big_padding"
     android:paddingVertical="@dimen/default_padding"
-    tools:context=".ui.main.TodayFragment">
+    tools:context=".ui.main.fragments.TodayFragment">
 
     <TextView
         android:id="@+id/textviewTime"
