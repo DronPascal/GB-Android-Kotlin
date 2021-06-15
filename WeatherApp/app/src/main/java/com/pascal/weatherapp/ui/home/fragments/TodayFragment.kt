@@ -1,4 +1,4 @@
-package com.pascal.weatherapp.ui.main.fragments
+package com.pascal.weatherapp.ui.home.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -18,7 +18,7 @@ class TodayFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_today, container, false)
+        return inflater.inflate(R.layout.home__fragment_today, container, false)
     }
 
 }

@@ -1,4 +1,4 @@
-package com.pascal.weatherapp.ui.main.fragments
+package com.pascal.weatherapp.ui.home.fragments
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

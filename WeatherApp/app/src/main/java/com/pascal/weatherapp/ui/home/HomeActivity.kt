@@ -1,4 +1,4 @@
-package com.pascal.weatherapp.ui.main
+package com.pascal.weatherapp.ui.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -6,20 +6,20 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayoutMediator
-import com.pascal.weatherapp.databinding.ActivityMainBinding
-import com.pascal.weatherapp.ui.main.fragments.FragmentsPagerAdapter
+import com.pascal.weatherapp.databinding.HomeActivityBinding
+import com.pascal.weatherapp.ui.home.fragments.FragmentsPagerAdapter
 import java.lang.Thread.sleep
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
-    private lateinit var mainViewModel: MainViewModel
+    private lateinit var binding: HomeActivityBinding
+    private lateinit var homeViewModel: HomeViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+        binding = HomeActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         initView()
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initPager() {
         binding.viewPager.apply {
-            adapter = FragmentsPagerAdapter(this@MainActivity)
+            adapter = FragmentsPagerAdapter(this@HomeActivity)
             getChildAt(0)?.overScrollMode = RecyclerView.OVER_SCROLL_NEVER
         }
     }

@@ -1,4 +1,4 @@
-package com.pascal.weatherapp.ui.main
+package com.pascal.weatherapp.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import com.pascal.weatherapp.app.AppState
 import java.sql.Timestamp
 
-class MainViewModel(
+class HomeViewModel(
     val detailsLiveData: MutableLiveData<AppState> = MutableLiveData(),
 ): ViewModel() {
 

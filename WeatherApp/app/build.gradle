@@ -47,7 +47,6 @@ android {
 dependencies {
 
     //Kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.5.0'
 
     // Design
@@ -73,6 +72,9 @@ dependencies {
 
     // GlideToVectorYou
     implementation 'com.github.corouteam:GlideToVectorYou:v2.0.0'
+
+    //GSON
+    implementation 'com.google.code.gson:gson:2.8.7'
 
     // Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'

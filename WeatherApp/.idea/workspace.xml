@@ -10,17 +10,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56317fef-53ba-438d-9dff-470b6d81c08f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/model/WeatherDTO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/loading_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/app/AppState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/app/AppState.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/model/City.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/model/City.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/model/Weather.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/repository/MainRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/data/MainRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/repository/remote/RemoteWeatherDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/data/remote/RemoteWeatherDataSource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/repository/remote/WeatherAPI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/data/remote/WeatherAPI.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/repository/remote/WeatherRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/data/remote/WeatherRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/repository/remote/WeatherRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/data/remote/WeatherRepositoryImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/main/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/HomeActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/main/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/HomeViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/main/fragments/FragmentsPagerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/FragmentsPagerAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/main/fragments/PlaceholderFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/PlaceholderFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/main/fragments/TenDaysFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TenDaysFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/main/fragments/TodayFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TodayFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/main/fragments/TomorrowFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TomorrowFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home__activity.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_ten_days.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home__fragment_ten_days.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_today.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home__fragment_today.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tomorrow.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home__fragment_tomorrow.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +44,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="valueResourceFile" />
       </list>
     </option>
   </component>
@@ -55,7 +63,22 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="VirtualDevicePath@C:\Users\Pascal\.android\avd\Pixel_XL_API_30.avd" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-06-15T00:02:32.191250700Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../TP-Android/DnD-Ultra/DnDUltra" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
+    <property name="project.structure.last.edited" value="Dependencies" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Andrew\Programming\Android-Geek\GB-Android-Kotlin\WeatherApp\app\src\main\res\layout" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Andrew\Programming\Android-Geek\GB-Android-Kotlin\WeatherApp\app\src\main\java\com\pascal\weatherapp\ui\home" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -65,7 +88,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="Weather_App.app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
@@ -148,18 +171,30 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1231" y="346" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1623755503389">
+    <state x="1054" y="305" key="#PSD" timestamp="1623757516835">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="1231" y="346" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1623755503389" />
+    <state x="1054" y="305" key="#PSD/0.0.2048.1112@0.0.2048.1112" timestamp="1623757516835" />
+    <state x="1231" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1623757324561">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="1231" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1623757324561" />
     <state x="100" y="100" width="1378" height="912" key="AVDManager" timestamp="1623715417474">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="100" y="100" width="1378" height="912" key="AVDManager/0.0.2048.1112@0.0.2048.1112" timestamp="1623715417474" />
+    <state x="1117" y="314" key="AndroidCreateResourceFileDialog" timestamp="1623763213719">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="1117" y="314" key="AndroidCreateResourceFileDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1623763213719" />
     <state x="300" y="311" key="FileChooserDialogImpl" timestamp="1623711766256">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="300" y="311" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1623711766256" />
+    <state x="1046" y="204" key="SettingsEditor" timestamp="1623762343192">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="1046" y="204" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1623762343192" />
     <state x="182" y="247" key="search.everywhere.popup" timestamp="1623715371033">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

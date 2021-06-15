@@ -1,4 +1,4 @@
-package com.pascal.weatherapp.ui.main.fragments
+package com.pascal.weatherapp.ui.home.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.pascal.weatherapp.R
 
-class TomorrowFragment : Fragment() {
+class TenDaysFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,6 +17,8 @@ class TomorrowFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_tomorrow, container, false)
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.home__fragment_ten_days, container, false)
     }
+
 }
