@@ -13,7 +13,7 @@
         tools:url="https://android-tools.ru/coding/webview-v-android/" />
 
     <include
-        android:id="@+id/loadingLayout"
+        android:id="@+id/includedLoadingLayout"
         layout="@layout/loading_layout" />
 
 </FrameLayout>

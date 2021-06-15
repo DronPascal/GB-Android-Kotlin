@@ -7,18 +7,19 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayoutMediator
 import com.pascal.weatherapp.databinding.HomeActivityBinding
+import com.pascal.weatherapp.ui.MainViewModel
 import com.pascal.weatherapp.ui.home.fragments.FragmentsPagerAdapter
 import java.lang.Thread.sleep
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: HomeActivityBinding
-    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var mainViewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+        mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         binding = HomeActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

@@ -13,7 +13,7 @@ class FragmentsPagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
     companion object {
         val TAB_TITLES = arrayOf(
             R.string.tab_text_1,
-            R.string.tab_text_2,
+            //R.string.tab_text_2,
             R.string.tab_text_3
         )
     }
@@ -24,9 +24,9 @@ class FragmentsPagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> TodayFragment()
-            1 -> TomorrowFragment()
-            else -> TenDaysFragment()
+            0 -> TodayFragment.newInstance()
+            //1 -> TomorrowFragment.newInstance()
+            else -> TenDaysFragment.newInstance()
         }
     }
 }

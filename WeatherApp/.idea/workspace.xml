@@ -10,24 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56317fef-53ba-438d-9dff-470b6d81c08f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/loading_layout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/main/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/HomeActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/main/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/HomeViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/main/fragments/FragmentsPagerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/FragmentsPagerAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/main/fragments/PlaceholderFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/PlaceholderFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/main/fragments/TenDaysFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TenDaysFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/main/fragments/TodayFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TodayFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/main/fragments/TomorrowFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TomorrowFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home__activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_ten_days.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home__fragment_ten_days.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_today.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home__fragment_today.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tomorrow.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home__fragment_tomorrow.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/HomeActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/HomeViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/MainViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/FragmentsPagerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/FragmentsPagerAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TenDaysFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TenDaysFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TodayFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TodayFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TomorrowFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TomorrowFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/home__fragment_ten_days.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home__fragment_ten_days.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/home__fragment_today.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home__fragment_today.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +64,9 @@
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.pascal.weatherapp.ui" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Andrew\Programming\Android-Geek\GB-Android-Kotlin\WeatherApp\app\src\main\res\layout" />
     </key>
@@ -175,10 +169,14 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="1054" y="305" key="#PSD/0.0.2048.1112@0.0.2048.1112" timestamp="1623757516835" />
-    <state x="1231" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1623757324561">
+    <state x="1231" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1623769691407">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="1231" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1623757324561" />
+    <state x="1231" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1623769691407" />
+    <state x="1316" y="351" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1623769715965">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="1316" y="351" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1623769715965" />
     <state x="100" y="100" width="1378" height="912" key="AVDManager" timestamp="1623715417474">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -195,6 +193,14 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="1046" y="204" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1623762343192" />
+    <state x="1246" y="263" width="578" height="592" key="find.popup" timestamp="1623770554649">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="1246" y="263" width="578" height="592" key="find.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1623770554649" />
+    <state x="1178" y="289" width="700" height="530" key="recent.locations.popup" timestamp="1623770543481">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="1178" y="289" width="700" height="530" key="recent.locations.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1623770543481" />
     <state x="182" y="247" key="search.everywhere.popup" timestamp="1623715371033">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

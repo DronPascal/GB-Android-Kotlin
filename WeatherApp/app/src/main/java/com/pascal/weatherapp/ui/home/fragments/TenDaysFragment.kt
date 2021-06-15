@@ -21,4 +21,8 @@ class TenDaysFragment : Fragment() {
         return inflater.inflate(R.layout.home__fragment_ten_days, container, false)
     }
 
+    companion object {
+        @JvmStatic
+        fun newInstance() = TenDaysFragment()
+    }
 }

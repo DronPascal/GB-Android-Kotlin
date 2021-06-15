@@ -110,7 +110,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <include
-        android:id="@+id/loadingLayout"
+        android:id="@+id/includedLoadingLayout"
         layout="@layout/loading_layout" />
 
 </FrameLayout>
