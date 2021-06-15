@@ -1,6 +1,6 @@
-package com.pascal.weatherapp.repository.remote
+package com.pascal.weatherapp.data.remote
 
-import com.pascal.weatherapp.model.Weather
+import com.pascal.weatherapp.model.WeatherDTO
 import retrofit2.Callback
 
 class WeatherRepositoryImpl(private val remoteWeatherDataSource: RemoteWeatherDataSource) :
@@ -8,7 +8,7 @@ class WeatherRepositoryImpl(private val remoteWeatherDataSource: RemoteWeatherDa
     override fun getWeatherDetailsFromServer(
         lat: Double,
         lon: Double,
-        callback: Callback<Weather>
+        callback: Callback<WeatherDTO>
     ) {
         remoteWeatherDataSource.getWeatherDetails(lat, lon, callback)
     }

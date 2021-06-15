@@ -1,8 +1,8 @@
-package com.pascal.weatherapp.repository.remote
+package com.pascal.weatherapp.data.remote
 
 import com.google.gson.GsonBuilder
 import com.pascal.weatherapp.BuildConfig
-import com.pascal.weatherapp.model.Weather
+import com.pascal.weatherapp.model.WeatherDTO
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -23,7 +23,7 @@ class RemoteWeatherDataSource {
         .client(createOkHttpClient(WeatherApiInterceptor()))
         .build().create(WeatherAPI::class.java)
 
-    fun getWeatherDetails(lat: Double, lon: Double, callback: Callback<Weather>) {
+    fun getWeatherDetails(lat: Double, lon: Double, callback: Callback<WeatherDTO>) {
         weatherApi.getWeather(BuildConfig.WEATHER_API_KEY, lat, lon).enqueue(callback)
     }
 

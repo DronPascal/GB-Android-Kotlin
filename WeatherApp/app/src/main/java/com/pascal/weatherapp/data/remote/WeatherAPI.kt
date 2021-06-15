@@ -1,6 +1,6 @@
-package com.pascal.weatherapp.repository.remote
+package com.pascal.weatherapp.data.remote
 
-import com.pascal.weatherapp.model.Weather
+import com.pascal.weatherapp.model.WeatherDTO
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -12,5 +12,5 @@ interface WeatherAPI {
         @Header("X-Yandex-API-Key") token: String,
         @Query("lat") lat: Double,
         @Query("lon") lon: Double
-    ): Call<Weather>
+    ): Call<WeatherDTO>
 }

@@ -8,4 +8,8 @@ data class City(
     val city: String,
     val lat: Double,
     val lon: Double
-) : Parcelable
+) : Parcelable {
+    companion object {
+        fun getDefaultCity() = City("Москва", 55.755826, 37.617299900000035)
+    }
+}
