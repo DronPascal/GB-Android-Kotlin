@@ -6,9 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeActivity">
 
+    <ImageView
+        android:id="@+id/imageBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_gradient" />
+
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/gray_alpha_5"
+        app:elevation="0dp"
         android:theme="@style/Theme.WeatherApp.AppBarOverlay">
 
         <TextView
@@ -25,30 +33,33 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
+            android:background="@android:color/transparent"
             app:tabIndicatorColor="@color/white"
-            app:tabSelectedTextColor="?attr/colorOnPrimary"
-            app:tabTextColor="@color/white_alpha_50" />
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/white_alpha_50">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tab 1"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tab 2"
+                tools:ignore="HardcodedText" />
+
+        </com.google.android.material.tabs.TabLayout>
+
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/swiperefresh"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-        <ImageView
-            android:id="@+id/imageBackground"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/view_pager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:overScrollMode="never" />
-
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -58,14 +69,5 @@
         android:layout_margin="@dimen/default_margin"
         android:contentDescription="@string/fab_icon_description"
         app:srcCompat="@android:drawable/ic_dialog_email" />
-
-    <ProgressBar
-        android:id="@+id/loadingIndicator"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="gone"
-        tools:visibility="visible" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

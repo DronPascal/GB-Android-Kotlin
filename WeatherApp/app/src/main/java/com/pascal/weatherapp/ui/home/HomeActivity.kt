@@ -29,7 +29,6 @@ class HomeActivity : AppCompatActivity() {
     private fun initView() {
         initPager()
         initTabs()
-        initRefresh()
         initFab()
     }
 
@@ -44,17 +43,6 @@ class HomeActivity : AppCompatActivity() {
         TabLayoutMediator(binding.tabs, binding.viewPager) { tab, position ->
             tab.text = getString(FragmentsPagerAdapter.TAB_TITLES[position])
         }.attach()
-    }
-
-    private fun initRefresh() {
-        binding.swiperefresh.setOnRefreshListener {
-            Thread {
-                sleep(1000)
-                //mainViewModel.refresh()}
-            }.start()
-        }
-        //mainViewModel.
-        binding.swiperefresh.isRefreshing = false;
     }
 
     private fun initFab() {

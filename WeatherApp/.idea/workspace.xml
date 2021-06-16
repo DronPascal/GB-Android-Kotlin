@@ -10,15 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56317fef-53ba-438d-9dff-470b6d81c08f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bg_gradient.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/app/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/app/App.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/HomeActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/HomeViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/MainViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/FragmentsPagerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/FragmentsPagerAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TenDaysFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TenDaysFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TodayFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TodayFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TomorrowFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TomorrowFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/home__activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home__activity.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/home__fragment_ten_days.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home__fragment_ten_days.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/home__fragment_today.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home__fragment_today.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +38,7 @@
       <list>
         <option value="Kotlin Class" />
         <option value="valueResourceFile" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -181,22 +184,54 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="100" y="100" width="1378" height="912" key="AVDManager/0.0.2048.1112@0.0.2048.1112" timestamp="1623715417474" />
-    <state x="1117" y="314" key="AndroidCreateResourceFileDialog" timestamp="1623763213719">
+    <state x="238" y="267" key="AndroidCreateResourceFileDialog" timestamp="1623795864570">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="1117" y="314" key="AndroidCreateResourceFileDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1623763213719" />
+    <state x="238" y="267" key="AndroidCreateResourceFileDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1623795864570" />
     <state x="300" y="311" key="FileChooserDialogImpl" timestamp="1623711766256">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="300" y="311" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1623711766256" />
+    <state width="979" height="307" key="GridCell.Tab.0.bottom" timestamp="1623804423454">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="979" height="307" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1623804423454" />
+    <state width="979" height="307" key="GridCell.Tab.0.center" timestamp="1623804423454">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="979" height="307" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1623804423454" />
+    <state width="979" height="307" key="GridCell.Tab.0.left" timestamp="1623804423454">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="979" height="307" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1623804423454" />
+    <state width="979" height="307" key="GridCell.Tab.0.right" timestamp="1623804423454">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="979" height="307" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1623804423454" />
+    <state width="2005" height="305" key="GridCell.Tab.1.bottom" timestamp="1623794317108">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1623794317108" />
+    <state width="2005" height="305" key="GridCell.Tab.1.center" timestamp="1623794317108">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1623794317108" />
+    <state width="2005" height="305" key="GridCell.Tab.1.left" timestamp="1623794317108">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1623794317108" />
+    <state width="2005" height="305" key="GridCell.Tab.1.right" timestamp="1623794317108">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1623794317108" />
     <state x="1046" y="204" key="SettingsEditor" timestamp="1623762343192">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="1046" y="204" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1623762343192" />
-    <state x="1246" y="263" width="578" height="592" key="find.popup" timestamp="1623770554649">
+    <state x="1246" y="263" width="578" height="592" key="find.popup" timestamp="1623795009674">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="1246" y="263" width="578" height="592" key="find.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1623770554649" />
+    <state x="1246" y="263" width="578" height="592" key="find.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1623795009674" />
     <state x="1178" y="289" width="700" height="530" key="recent.locations.popup" timestamp="1623770543481">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -205,5 +240,21 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="182" y="247" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1623715371033" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TodayFragment.kt</url>
+          <line>31</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TodayFragment.kt</url>
+          <line>30</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
