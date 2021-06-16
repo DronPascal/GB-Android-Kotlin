@@ -10,25 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56317fef-53ba-438d-9dff-470b6d81c08f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/data/model/WeatherRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/utils/WeatherCondition.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/app/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/app/App.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/app/AppState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/app/AppState.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/data/MainRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/data/MainRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/data/remote/RemoteWeatherDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/data/remote/WeatherRemoteDataSource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/data/remote/WeatherAPI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/data/remote/WeatherAPI.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/data/remote/WeatherRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/data/remote/WeatherRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/data/remote/WeatherRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/data/remote/WeatherRepositoryImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/model/City.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/data/model/City.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/model/WeatherDTO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/data/model/WeatherDTO.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/MainViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/HomeActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/PlaceholderFragment.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TenDaysFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TenDaysFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TodayFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TodayFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pascal/weatherapp/ui/home/fragments/TomorrowFragment.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/home__fragment_today.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home__fragment_today.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/home__fragment_tomorrow.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +56,7 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-06-15T00:02:32.191250700Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Android/Sample Technics/views-widgets-samples/SwipeRefreshLayoutBasic" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -200,10 +187,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="1316" y="351" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1623769715965" />
-    <state x="100" y="100" width="1378" height="912" key="AVDManager" timestamp="1623715417474">
+    <state x="100" y="100" width="1378" height="912" key="AVDManager" timestamp="1623886736201">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="100" y="100" width="1378" height="912" key="AVDManager/0.0.2048.1112@0.0.2048.1112" timestamp="1623715417474" />
+    <state x="100" y="100" width="1378" height="912" key="AVDManager/0.0.2048.1112@0.0.2048.1112" timestamp="1623886736201" />
     <state x="238" y="267" key="AndroidCreateResourceFileDialog" timestamp="1623795864570">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -212,26 +199,26 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="1328" y="306" key="AndroidProcessChooserDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1623860317804" />
-    <state x="300" y="311" key="FileChooserDialogImpl" timestamp="1623711766256">
+    <state x="300" y="311" key="FileChooserDialogImpl" timestamp="1623886918485">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="300" y="311" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1623711766256" />
-    <state width="979" height="307" key="GridCell.Tab.0.bottom" timestamp="1623860590004">
+    <state x="300" y="311" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1623886918485" />
+    <state width="1204" height="307" key="GridCell.Tab.0.bottom" timestamp="1623865024902">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="979" height="307" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1623860590004" />
-    <state width="979" height="307" key="GridCell.Tab.0.center" timestamp="1623860590004">
+    <state width="1204" height="307" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1623865024902" />
+    <state width="1204" height="307" key="GridCell.Tab.0.center" timestamp="1623865024902">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="979" height="307" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1623860590004" />
-    <state width="979" height="307" key="GridCell.Tab.0.left" timestamp="1623860590004">
+    <state width="1204" height="307" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1623865024902" />
+    <state width="1204" height="307" key="GridCell.Tab.0.left" timestamp="1623865024902">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="979" height="307" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1623860590004" />
-    <state width="979" height="307" key="GridCell.Tab.0.right" timestamp="1623860590004">
+    <state width="1204" height="307" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1623865024902" />
+    <state width="1204" height="307" key="GridCell.Tab.0.right" timestamp="1623865024902">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="979" height="307" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1623860590004" />
+    <state width="1204" height="307" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1623865024902" />
     <state width="979" height="304" key="GridCell.Tab.1.bottom" timestamp="1623860387196">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

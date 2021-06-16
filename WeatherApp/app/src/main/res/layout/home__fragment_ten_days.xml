@@ -4,7 +4,8 @@
     android:id="@+id/contentLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.fragments.TenDaysFragment">
+    tools:context=".ui.home.fragments.TenDaysFragment"
+    tools:background="@color/lignt_blue_havelock">
 
     <WebView
         android:id="@+id/webView"

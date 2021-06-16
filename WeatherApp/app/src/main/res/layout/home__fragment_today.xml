@@ -9,7 +9,8 @@
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:background="@color/lignt_blue_havelock">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/contentLayout"
@@ -34,6 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_margin"
                 android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="@color/white"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textviewTime"
                 tools:text="Днем 26° ∙ Ночью 14°" />
@@ -43,6 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="@color/white"
                 android:textSize="72sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textviewDayNightTemp"
@@ -54,6 +57,7 @@
                 android:paddingTop="@dimen/huge_padding"
                 android:text="@string/degree_superior"
                 android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="@color/white"
                 android:textSize="48sp"
                 app:layout_constraintLeft_toRightOf="@+id/textviewTemp"
                 app:layout_constraintTop_toTopOf="@id/textviewTemp" />
@@ -62,7 +66,8 @@
                 android:id="@+id/textviewFeels"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?attr/textAppearanceBody2"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="@color/white"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textviewTemp"
                 tools:text="Ощущается как 18°" />
@@ -85,7 +90,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:textAppearance="?attr/textAppearanceBody2"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="@color/white"
                 app:layout_constraintLeft_toLeftOf="@id/imageWeather"
                 app:layout_constraintRight_toRightOf="@id/imageWeather"
                 app:layout_constraintTop_toBottomOf="@id/imageWeather"
@@ -99,7 +105,7 @@
                 android:scaleType="centerInside"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:tint="?attr/colorOnSurface"
+                app:tint="@color/white"
                 tools:src="@drawable/ic_umbrella" />
 
             <TextView
@@ -107,7 +113,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/small_margin"
-                android:textAppearance="?attr/textAppearanceBody2"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/imageUmbrella"
                 tools:text="Вероятность осадков: 70%" />
