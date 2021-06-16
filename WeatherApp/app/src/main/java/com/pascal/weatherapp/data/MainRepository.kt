@@ -1,6 +1,6 @@
 package com.pascal.weatherapp.data
 
-import com.pascal.weatherapp.model.WeatherDTO
+import com.pascal.weatherapp.data.model.WeatherDTO
 
 interface MainRepository {
     fun getWeatherFromServer(): WeatherDTO

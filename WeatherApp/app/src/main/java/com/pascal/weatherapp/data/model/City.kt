@@ -1,4 +1,4 @@
-package com.pascal.weatherapp.model
+package com.pascal.weatherapp.data.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

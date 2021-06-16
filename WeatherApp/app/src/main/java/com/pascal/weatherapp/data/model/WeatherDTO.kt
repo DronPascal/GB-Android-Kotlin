@@ -1,4 +1,4 @@
-package com.pascal.weatherapp.model
+package com.pascal.weatherapp.data.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
@@ -29,7 +29,7 @@ data class FactDTO(
 
 @Parcelize
 data class ForecastDTO(
-    val parts: PartsDTO?
+    val parts: List<PartsDTO>?
 ) : Parcelable
 
 @Parcelize

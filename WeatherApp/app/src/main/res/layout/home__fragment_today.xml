@@ -81,7 +81,7 @@
                 tools:src="@drawable/ic_launcher_background" />
 
             <TextView
-                android:id="@+id/textviewWeather"
+                android:id="@+id/textviewWeatherCondition"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
@@ -103,7 +103,7 @@
                 tools:src="@drawable/ic_umbrella" />
 
             <TextView
-                android:id="@+id/textviewPrecipitation"
+                android:id="@+id/textviewPrecProb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/small_margin"

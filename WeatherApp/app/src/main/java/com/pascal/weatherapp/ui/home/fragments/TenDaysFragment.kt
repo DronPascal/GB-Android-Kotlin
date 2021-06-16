@@ -5,9 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.pascal.weatherapp.R
+import com.pascal.weatherapp.databinding.HomeFragmentTenDaysBinding
 
 class TenDaysFragment : Fragment() {
+
+    private var _binding: HomeFragmentTenDaysBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +21,8 @@ class TenDaysFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.home__fragment_ten_days, container, false)
+        _binding = HomeFragmentTenDaysBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     companion object {
