@@ -1,15 +1,17 @@
 package com.pascal.weatherapp.ui.home.fragments
 
+import android.graphics.Typeface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import coil.ImageLoader
+import coil.decode.SvgDecoder
+import coil.load
 import com.pascal.weatherapp.R
 import com.pascal.weatherapp.app.AppState
-import com.pascal.weatherapp.data.model.City
 import com.pascal.weatherapp.data.model.WeatherDTO
-import com.pascal.weatherapp.data.model.WeatherRequest
 import com.pascal.weatherapp.databinding.HomeFragmentTodayBinding
 import com.pascal.weatherapp.ui.home.HomeActivity
 import com.pascal.weatherapp.utils.resFromCondition
@@ -23,6 +25,8 @@ class TodayFragment : Fragment() {
     private var _binding: HomeFragmentTodayBinding? = null
     private val binding get() = _binding!!
     private val viewModel get() = (requireActivity() as HomeActivity).mainViewModel
+
+    private lateinit var imageLoader: ImageLoader
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,8 +47,15 @@ class TodayFragment : Fragment() {
 
     private fun initView() {
         initRefresher()
+        initTempTv()
+
+        imageLoader = ImageLoader.Builder(requireContext())
+            .componentRegistry { add(SvgDecoder(requireContext())) }
+            .build()
 
         viewModel.weatherDtoLiveData.observe(viewLifecycleOwner, {
+            binding.contentLayout.visibility = View.VISIBLE
+            binding.includedLoadingLayout.loadingLayout.visibility = View.GONE
             displayNewWeather(it)
         })
 
@@ -52,9 +63,11 @@ class TodayFragment : Fragment() {
             binding.swipeRefresh.isRefreshing = false
             when (it) {
                 is AppState.Success -> {
+                    binding.contentLayout.visibility = View.VISIBLE
                     binding.includedLoadingLayout.loadingLayout.visibility = View.GONE
                 }
                 is AppState.Loading -> {
+                    binding.contentLayout.visibility = View.GONE
                     binding.includedLoadingLayout.loadingLayout.visibility = View.VISIBLE
                 }
                 is AppState.Error -> {
@@ -71,10 +84,14 @@ class TodayFragment : Fragment() {
         }
     }
 
+    private fun initTempTv() {
+        val typeface = Typeface.createFromAsset(requireContext().assets, "fonts/Roboto-Light.ttf")
+        binding.textviewTemp.typeface = typeface
+        binding.textviewDegree.typeface = typeface
+    }
+
     private fun displayNewWeather(weatherDTO: WeatherDTO) {
         with(binding) {
-            includedLoadingLayout.loadingLayout.visibility = View.GONE
-
             // update date
             weatherDTO.now?.let {
                 val date = Date().apply { time = System.currentTimeMillis() }
@@ -100,7 +117,11 @@ class TodayFragment : Fragment() {
             }
 
             // weather icon
-            // TODO setup weather icon with Coil
+            weatherDTO.fact?.icon?.let {
+                val str = YA_ICONS_URI_TEMPLATE.format(it)
+                println(str)
+                binding.imageWeather.load(str, imageLoader)
+            }
 
             // current condition
             weatherDTO.fact?.condition?.let {
@@ -129,5 +150,7 @@ class TodayFragment : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance() = TodayFragment()
+        val YA_ICONS_URI_TEMPLATE =
+            "https://yastatic.net/weather/i/icons/blueye/color/svg/%s.svg"
     }
 }

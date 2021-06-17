@@ -2,7 +2,6 @@
     <string name="app_name">Погода</string>
     <string name="tab_text_today">Сегодня</string>
     <string name="tab_text_10days">10 дней</string>
-    <!-- TODO: Remove or change this placeholder text -->
 
     <!--  Today Fragment  -->
     <string name="degree_superior"><sup>℃</sup></string>
