@@ -1,19 +1,23 @@
 <resources>
+    <!--  All  -->
     <string name="app_name">Погода</string>
+
+    <!--  Home: Fragment Pager  -->
     <string name="tab_text_today">Сегодня</string>
     <string name="tab_text_10days">10 дней</string>
 
-    <!--  Today Fragment  -->
-    <string name="degree_superior"><sup>℃</sup></string>
+    <!--  Home: Today Fragment  -->
     <string name="weather_icon_description">Иконка погоды</string>
     <string name="umbrella_icon_description">Иконка зонтика</string>
     <string name="fab_icon_description">fab_icon_description</string>
 
     <string name="template_date_and_time">%d %s, %d:%d</string>
     <string name="template_day_night">Днем %d° ∙ Ночью %d°</string>
+    <string name="template_cur_temp">%d℃</string>
     <string name="template_feels_like">Ощущается как %d°</string>
-    <string name="template_prec_prob">Вероятность осадков: %d%</string>
+    <string name="template_prec_prob">Вероятность осадков: %d%%</string>
 
+    <!--  Conditions Translation  -->
     <string name="condition_blank"> </string>
     <string name="condition_clear">Ясно</string>
     <string name="condition_partly_cloudy">Малооблачно</string>

@@ -9,4 +9,5 @@ interface WeatherRepository {
         requestDto: WeatherRequest,
         callback: retrofit2.Callback<WeatherDTO>
     )
+
 }

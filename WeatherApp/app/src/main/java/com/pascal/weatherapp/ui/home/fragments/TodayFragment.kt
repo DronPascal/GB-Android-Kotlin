@@ -2,9 +2,16 @@ package com.pascal.weatherapp.ui.home.fragments
 
 import android.graphics.Typeface
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.SpannableStringBuilder
+import android.text.style.RelativeSizeSpan
+import android.text.style.SuperscriptSpan
+import android.util.StringBuilderPrinter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import coil.ImageLoader
 import coil.decode.SvgDecoder
@@ -54,7 +61,6 @@ class TodayFragment : Fragment() {
             .build()
 
         viewModel.weatherDtoLiveData.observe(viewLifecycleOwner, {
-            binding.contentLayout.visibility = View.VISIBLE
             binding.includedLoadingLayout.loadingLayout.visibility = View.GONE
             displayNewWeather(it)
         })
@@ -63,11 +69,10 @@ class TodayFragment : Fragment() {
             binding.swipeRefresh.isRefreshing = false
             when (it) {
                 is AppState.Success -> {
-                    binding.contentLayout.visibility = View.VISIBLE
                     binding.includedLoadingLayout.loadingLayout.visibility = View.GONE
+                    binding.swipeRefresh.isRefreshing = false
                 }
                 is AppState.Loading -> {
-                    binding.contentLayout.visibility = View.GONE
                     binding.includedLoadingLayout.loadingLayout.visibility = View.VISIBLE
                 }
                 is AppState.Error -> {
@@ -80,6 +85,7 @@ class TodayFragment : Fragment() {
     private fun initRefresher() {
         binding.swipeRefresh.setOnRefreshListener {
             viewModel.initiateWeatherRefresh()
+            // TODO Somehow deal with loading layout nicely
             binding.includedLoadingLayout.loadingLayout.visibility = View.GONE
         }
     }
@@ -87,7 +93,6 @@ class TodayFragment : Fragment() {
     private fun initTempTv() {
         val typeface = Typeface.createFromAsset(requireContext().assets, "fonts/Roboto-Light.ttf")
         binding.textviewTemp.typeface = typeface
-        binding.textviewDegree.typeface = typeface
     }
 
     private fun displayNewWeather(weatherDTO: WeatherDTO) {
@@ -108,7 +113,10 @@ class TodayFragment : Fragment() {
             }
             // current temp
             weatherDTO.fact?.temp?.let {
-                textviewTemp.text = it.toString()
+                val ts = SpannableString(getString(R.string.template_cur_temp).format(it))
+                ts.setSpan(SuperscriptSpan(), ts.length-1, ts.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+                ts.setSpan(RelativeSizeSpan(0.5f), ts.length-1, ts.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+                textviewTemp.text = ts
             }
             // feels like
             weatherDTO.fact?.feels_like?.let {
