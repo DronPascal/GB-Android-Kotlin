@@ -1,14 +1,39 @@
 <resources>
-    <string name="app_name">Weather App</string>
-    <string name="tab_text_1">Today</string>
-    <string name="tab_text_2">Tomorrow</string>
-    <string name="tab_text_3">10 days</string>
+    <string name="app_name">Погода</string>
+    <string name="tab_text_today">Сегодня</string>
+    <string name="tab_text_10days">10 дней</string>
     <!-- TODO: Remove or change this placeholder text -->
 
     <!--  Today Fragment  -->
     <string name="degree_superior"><sup>℃</sup></string>
-    <string name="weather_icon_description">Weather icon</string>
-    <string name="umbrella_icon_description">Umbrella icon</string>
+    <string name="weather_icon_description">Иконка погоды</string>
+    <string name="umbrella_icon_description">Иконка зонтика</string>
     <string name="fab_icon_description">fab_icon_description</string>
+
+    <string name="template_date_and_time">%d %s, %d:%d</string>
+    <string name="template_day_night">Днем %d° ∙ Ночью %d°</string>
+    <string name="template_feels_like">Ощущается как %d°</string>
+    <string name="template_prec_prob">Вероятность осадков: %d%</string>
+
+    <string name="condition_blank"> </string>
+    <string name="condition_clear">Ясно</string>
+    <string name="condition_partly_cloudy">Малооблачно</string>
+    <string name="condition_cloudy">Облачно С Прояснениями</string>
+    <string name="condition_overcast">Пасмурно</string>
+    <string name="condition_drizzle">Морось</string>
+    <string name="condition_light_rain">Небольшой Дождь</string>
+    <string name="condition_rain">Дождь</string>
+    <string name="condition_moderate_rain">Умеренно Сильный Дождь</string>
+    <string name="condition_heavy_rain">Сильный Дождь</string>
+    <string name="condition_continuous_heavy_rain">Длительный Сильный Дождь</string>
+    <string name="condition_showers">Ливень</string>
+    <string name="condition_wet_snow">Дождь Со Снегом</string>
+    <string name="condition_light_snow">Небольшой Снег</string>
+    <string name="condition_snow">Снег</string>
+    <string name="condition_snow_showers">Снегопад</string>
+    <string name="condition_hail">Град</string>
+    <string name="condition_thunderstorm">Гроза</string>
+    <string name="condition_thunderstorm_with_rain">Дождь С Грозой</string>
+    <string name="condition_thunderstorm_with_hail">Гроза С Градом</string>
 
 </resources>

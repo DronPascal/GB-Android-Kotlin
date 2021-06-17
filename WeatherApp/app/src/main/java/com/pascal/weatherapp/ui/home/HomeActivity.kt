@@ -6,8 +6,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayoutMediator
-import com.pascal.weatherapp.data.model.City
-import com.pascal.weatherapp.data.model.WeatherRequest
 import com.pascal.weatherapp.databinding.HomeActivityBinding
 import com.pascal.weatherapp.ui.MainViewModel
 import com.pascal.weatherapp.ui.home.fragments.FragmentsPagerAdapter
@@ -27,9 +25,7 @@ class HomeActivity : AppCompatActivity() {
 
         initView()
 
-        City.getDefaultCity().let {
-            mainViewModel.getWeatherFromRemoteSource(WeatherRequest(it.lat, it.lon))
-        }
+        mainViewModel.initiateWeatherRefresh()
     }
 
     private fun initView() {

@@ -3,6 +3,7 @@ package com.pascal.weatherapp.ui
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.pascal.weatherapp.app.AppState
+import com.pascal.weatherapp.data.model.City
 import com.pascal.weatherapp.data.model.WeatherDTO
 import com.pascal.weatherapp.data.model.WeatherRequest
 import com.pascal.weatherapp.data.remote.WeatherRemoteDataSource
@@ -21,17 +22,18 @@ class MainViewModel(
         WeatherRepositoryImpl(WeatherRemoteDataSource())
 ) : ViewModel() {
 
-    fun getWeatherFromRemoteSource(requestDto: WeatherRequest) {
+    fun initiateWeatherRefresh() {
         appStateLiveData.value = AppState.Loading
-        weatherRepository.getWeatherDetailsFromServer(requestDto, callBack)
+        City.getDefaultCity().let {
+            weatherRepository.getWeatherDetailsFromServer(WeatherRequest(it.lat, it.lon), callBack)
+        }
     }
 
     private val callBack = object : Callback<WeatherDTO> {
-
         override fun onResponse(call: Call<WeatherDTO>, response: Response<WeatherDTO>) {
             val serverResponse: WeatherDTO? = response.body()
             if (response.isSuccessful && serverResponse != null) {
-                checkResponse(serverResponse)
+                validateResponse(serverResponse)
             } else {
                 appStateLiveData.postValue(AppState.Error(Throwable(SERVER_ERROR)))
             }
@@ -41,18 +43,17 @@ class MainViewModel(
             appStateLiveData.postValue(AppState.Error(Throwable(t.message ?: REQUEST_ERROR)))
         }
 
-        private fun checkResponse(serverResponse: WeatherDTO) {
-            with(serverResponse) {
+        private fun validateResponse(response: WeatherDTO) {
+            with(response) {
                 return if (listOf(info, fact, forecast, now, now_dt, info?.url)
                         .any { it == null }
                 ) {
                     appStateLiveData.postValue(AppState.Error(Throwable(CORRUPTED_DATA)))
                 } else {
-                    weatherDtoLiveData.postValue(serverResponse)
+                    weatherDtoLiveData.postValue(response)
                 }
             }
         }
-
     }
 
     companion object {
