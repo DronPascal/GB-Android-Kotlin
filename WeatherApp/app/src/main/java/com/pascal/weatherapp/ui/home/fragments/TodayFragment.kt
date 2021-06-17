@@ -2,16 +2,12 @@ package com.pascal.weatherapp.ui.home.fragments
 
 import android.graphics.Typeface
 import android.os.Bundle
-import android.text.Spannable
 import android.text.SpannableString
-import android.text.SpannableStringBuilder
 import android.text.style.RelativeSizeSpan
 import android.text.style.SuperscriptSpan
-import android.util.StringBuilderPrinter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import coil.ImageLoader
 import coil.decode.SvgDecoder
@@ -34,10 +30,6 @@ class TodayFragment : Fragment() {
     private val viewModel get() = (requireActivity() as HomeActivity).mainViewModel
 
     private lateinit var imageLoader: ImageLoader
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -66,7 +58,6 @@ class TodayFragment : Fragment() {
         })
 
         viewModel.appStateLiveData.observe(viewLifecycleOwner, {
-            binding.swipeRefresh.isRefreshing = false
             when (it) {
                 is AppState.Success -> {
                     binding.includedLoadingLayout.loadingLayout.visibility = View.GONE
@@ -76,6 +67,7 @@ class TodayFragment : Fragment() {
                     binding.includedLoadingLayout.loadingLayout.visibility = View.VISIBLE
                 }
                 is AppState.Error -> {
+                    binding.swipeRefresh.isRefreshing = false
                     it.error.message?.let { msg -> binding.root.showSnackBar(msg) }
                 }
             }
@@ -114,8 +106,8 @@ class TodayFragment : Fragment() {
             // current temp
             weatherDTO.fact?.temp?.let {
                 val ts = SpannableString(getString(R.string.template_cur_temp).format(it))
-                ts.setSpan(SuperscriptSpan(), ts.length-1, ts.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-                ts.setSpan(RelativeSizeSpan(0.5f), ts.length-1, ts.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+                ts.setSpan(SuperscriptSpan(), ts.length - 1, ts.length, 0)
+                ts.setSpan(RelativeSizeSpan(0.5f), ts.length - 1, ts.length, 0)
                 textviewTemp.text = ts
             }
             // feels like
