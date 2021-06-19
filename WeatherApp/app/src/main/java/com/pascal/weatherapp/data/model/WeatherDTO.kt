@@ -46,7 +46,7 @@ val testWeatherDTO
         info = InfoDTO(
             lat = 55.755826,
             lon = 37.617299900000035,
-            url = "https://yandex.ru/pogoda/213?lat=55.755826\u0026lon=37.6172999"
+            url = "https://yandex.ru/pogoda"
         ),
         fact = FactDTO(
             temp = (-20..30).random(),
