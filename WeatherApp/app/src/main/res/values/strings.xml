@@ -4,6 +4,9 @@
     <string name="snackbar_check_connection_msg">Проверьте подключение к интернету</string>
     <string name="close">Закрыть</string>
 
+    <!--  Home Search  -->
+    <string name="search_hint">Поиск мест</string>
+
     <!--  Home: Fragment Pager  -->
     <string name="tab_text_today">Сегодня</string>
     <string name="tab_text_10days">10 дней</string>
@@ -22,23 +25,22 @@
     <string name="condition_blank"> </string>
     <string name="condition_clear">Ясно</string>
     <string name="condition_partly_cloudy">Малооблачно</string>
-    <string name="condition_cloudy">Облачно С Прояснениями</string>
+    <string name="condition_cloudy">Облачно с прояснениями</string>
     <string name="condition_overcast">Пасмурно</string>
     <string name="condition_drizzle">Морось</string>
-    <string name="condition_light_rain">Небольшой Дождь</string>
+    <string name="condition_light_rain">Небольшой дождь</string>
     <string name="condition_rain">Дождь</string>
-    <string name="condition_moderate_rain">Умеренно Сильный Дождь</string>
-    <string name="condition_heavy_rain">Сильный Дождь</string>
-    <string name="condition_continuous_heavy_rain">Длительный Сильный Дождь</string>
+    <string name="condition_moderate_rain">Умеренно сильный дождь</string>
+    <string name="condition_heavy_rain">Сильный дождь</string>
+    <string name="condition_continuous_heavy_rain">Длительный сильный дождь</string>
     <string name="condition_showers">Ливень</string>
-    <string name="condition_wet_snow">Дождь Со Снегом</string>
-    <string name="condition_light_snow">Небольшой Снег</string>
+    <string name="condition_wet_snow">Дождь со снегом</string>
+    <string name="condition_light_snow">Небольшой снег</string>
     <string name="condition_snow">Снег</string>
     <string name="condition_snow_showers">Снегопад</string>
     <string name="condition_hail">Град</string>
     <string name="condition_thunderstorm">Гроза</string>
-    <string name="condition_thunderstorm_with_rain">Дождь С Грозой</string>
-    <string name="condition_thunderstorm_with_hail">Гроза С Градом</string>
-
+    <string name="condition_thunderstorm_with_rain">Дождь c грозой</string>
+    <string name="condition_thunderstorm_with_hail">Гроза с градом</string>
 
 </resources>

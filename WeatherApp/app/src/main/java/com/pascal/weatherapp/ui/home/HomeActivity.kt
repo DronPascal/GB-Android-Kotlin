@@ -1,12 +1,14 @@
 package com.pascal.weatherapp.ui.home
 
-import android.content.BroadcastReceiver
-import android.content.Intent
-import android.content.IntentFilter
+import android.app.SearchManager
+import android.content.*
 import android.net.ConnectivityManager
 import android.os.Bundle
 import android.view.Gravity
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
@@ -21,15 +23,14 @@ import com.pascal.weatherapp.ui.home.fragments.FragmentsPagerAdapter
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: HomeActivityBinding
+    private lateinit var mainViewModel: MainViewModel
     private lateinit var receiver: BroadcastReceiver
     private lateinit var snackbar: Snackbar
-    private lateinit var mainViewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = HomeActivityBinding.inflate(layoutInflater)
         mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-
         setContentView(binding.root)
 
         initView()
@@ -37,12 +38,22 @@ class HomeActivity : AppCompatActivity() {
         mainViewModel.initiateWeatherRefresh()
     }
 
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        intent?.let { handleIntent(it) }
+    }
+
     private fun initView() {
+        initToolbar()
         initPager()
         initTabs()
-        initFab()
         initSnackbar()
+        initFab()
         initReceiver()
+    }
+
+    private fun initToolbar() {
+        setSupportActionBar(binding.toolbar)
     }
 
     private fun initPager() {
@@ -90,6 +101,42 @@ class HomeActivity : AppCompatActivity() {
         snackbar.view.layoutParams = params
         snackbar.setAction(getString(R.string.close)) { snackbar.dismiss() }
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.home_menu, menu)
+        val searchItem = menu?.findItem(R.id.action_search)
+        searchItem?.let { initSearch(it) }
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    private fun initSearch(searchItem: MenuItem) {
+        val searchView = searchItem.actionView as SearchView
+        // TODO Currently this ↙ is the best way to solve search view width issue.
+        searchView.maxWidth = Int.MAX_VALUE
+
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextChange(newText: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+        })
+
+        val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
+        val componentName = ComponentName(this, this::class.java)
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
+    }
+
+    private fun handleIntent(intent: Intent) {
+        if (Intent.ACTION_SEARCH == intent.action) {
+            val query = intent.getStringExtra(SearchManager.QUERY)
+            query?.let { doSearch(it) }
+        }
+    }
+
+    private fun doSearch(query: String) {}
 
     override fun onDestroy() {
         super.onDestroy()
