@@ -8,7 +8,7 @@ fun View.showActionSnackBar(
     text: String,
     actionText: String,
     action: (View) -> Unit,
-    length: Int = Snackbar.LENGTH_INDEFINITE
+    length: Int = Snackbar.LENGTH_SHORT
 ) {
     Snackbar.make(this, text, length).setAction(actionText, action)
         .show()
@@ -16,7 +16,7 @@ fun View.showActionSnackBar(
 
 fun View.showSnackBar(
     text: String,
-    length: Int = Snackbar.LENGTH_INDEFINITE
+    length: Int = Snackbar.LENGTH_SHORT
 ) {
     Snackbar.make(this, text, length)
         .show()
@@ -24,7 +24,7 @@ fun View.showSnackBar(
 
 fun View.showSnackBar(
     @StringRes stringId: Int,
-    length: Int = Snackbar.LENGTH_INDEFINITE
+    length: Int = Snackbar.LENGTH_SHORT
 ) {
     Snackbar.make(this, this.resources.getText(stringId), length)
         .show()

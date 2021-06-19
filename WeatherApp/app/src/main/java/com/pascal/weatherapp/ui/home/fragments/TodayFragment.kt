@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import coil.ImageLoader
 import coil.decode.SvgDecoder
 import coil.load
@@ -16,7 +17,7 @@ import com.pascal.weatherapp.R
 import com.pascal.weatherapp.app.AppState
 import com.pascal.weatherapp.data.model.WeatherDTO
 import com.pascal.weatherapp.databinding.HomeFragmentTodayBinding
-import com.pascal.weatherapp.ui.home.HomeActivity
+import com.pascal.weatherapp.ui.MainViewModel
 import com.pascal.weatherapp.utils.resFromCondition
 import com.pascal.weatherapp.utils.showSnackBar
 import java.text.SimpleDateFormat
@@ -27,15 +28,15 @@ class TodayFragment : Fragment() {
 
     private var _binding: HomeFragmentTodayBinding? = null
     private val binding get() = _binding!!
-    private val viewModel get() = (requireActivity() as HomeActivity).mainViewModel
-
+    private lateinit var viewModel: MainViewModel
     private lateinit var imageLoader: ImageLoader
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = HomeFragmentTodayBinding.inflate(inflater, container, false)
+        viewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
         return binding.root
     }
 

@@ -36,7 +36,7 @@ class MainViewModel(
 
     fun initiateWeatherRefresh() {
         appStateLiveData.value = AppState.Loading
-        initiateTestWeatherRefresh()
+        initiateServerWeatherRefresh()
     }
 
     fun initiateServerWeatherRefresh() {

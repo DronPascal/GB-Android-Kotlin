@@ -1,6 +1,8 @@
 <resources>
     <!--  All  -->
     <string name="app_name">Погода</string>
+    <string name="snackbar_check_connection_msg">Проверьте подключение к интернету</string>
+    <string name="close">Закрыть</string>
 
     <!--  Home: Fragment Pager  -->
     <string name="tab_text_today">Сегодня</string>
@@ -11,7 +13,6 @@
     <string name="umbrella_icon_description">Иконка зонтика</string>
     <string name="fab_icon_description">fab_icon_description</string>
 
-    <string name="template_date_and_time">%d %s, %d:%d</string>
     <string name="template_day_night">Днем %d° ∙ Ночью %d°</string>
     <string name="template_cur_temp">%d℃</string>
     <string name="template_feels_like">Ощущается как %d°</string>
@@ -38,5 +39,6 @@
     <string name="condition_thunderstorm">Гроза</string>
     <string name="condition_thunderstorm_with_rain">Дождь С Грозой</string>
     <string name="condition_thunderstorm_with_hail">Гроза С Градом</string>
+
 
 </resources>
