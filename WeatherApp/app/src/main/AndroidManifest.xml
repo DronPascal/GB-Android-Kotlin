@@ -46,6 +46,9 @@
             </intent-filter>
         </receiver>
 
+            <provider android:name=".ui.home.SearchSuggestionProvider"
+                android:authorities="com.pascal.weatherapp.SearchSuggestionProvider" />
+
     </application>
 
 </manifest>

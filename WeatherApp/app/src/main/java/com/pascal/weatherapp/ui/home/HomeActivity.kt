@@ -4,9 +4,11 @@ import android.app.SearchManager
 import android.content.*
 import android.net.ConnectivityManager
 import android.os.Bundle
+import android.provider.SearchRecentSuggestions
 import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -40,6 +42,7 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
+        // For SearchView
         intent?.let { handleIntent(it) }
     }
 
@@ -131,12 +134,19 @@ class HomeActivity : AppCompatActivity() {
 
     private fun handleIntent(intent: Intent) {
         if (Intent.ACTION_SEARCH == intent.action) {
-            val query = intent.getStringExtra(SearchManager.QUERY)
-            query?.let { doSearch(it) }
+            intent.getStringExtra(SearchManager.QUERY)?.also { query ->
+                doSearch(query)
+                with(SearchSuggestionProvider) {
+                    SearchRecentSuggestions(this@HomeActivity, AUTHORITY, MODE)
+                        .saveRecentQuery(query, null)
+                }
+            }
         }
     }
 
-    private fun doSearch(query: String) {}
+    private fun doSearch(query: String) {
+        Toast.makeText(this, query, Toast.LENGTH_SHORT).show()
+    }
 
     override fun onDestroy() {
         super.onDestroy()

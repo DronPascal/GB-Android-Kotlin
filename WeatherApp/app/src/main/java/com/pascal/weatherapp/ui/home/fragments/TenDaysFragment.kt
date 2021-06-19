@@ -71,7 +71,7 @@ class TenDaysFragment : Fragment() {
             override fun shouldOverrideKeyEvent(view: WebView?, event: KeyEvent?): Boolean {
                 return false
             }
-            
+
             override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
                 view.loadUrl(url)
                 return true
