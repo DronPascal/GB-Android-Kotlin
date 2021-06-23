@@ -11,7 +11,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.*
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.pascal.weatherapp.databinding.HomeFragmentTenDaysBinding
@@ -88,16 +87,14 @@ class TenDaysFragment : Fragment() {
 
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
-                Toast.makeText(requireContext(), "Страница загружена!", Toast.LENGTH_SHORT).show()
+                binding.includedLoadingLayout.loadingLayout.visibility = View.GONE
+                //Toast.makeText(requireContext(), "Страница загружена!", Toast.LENGTH_SHORT).show()
             }
 
             override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
                 super.onPageStarted(view, url, favicon)
-                Toast.makeText(
-                    requireContext(),
-                    "Начата загрузка страницы $url",
-                    Toast.LENGTH_SHORT
-                ).show()
+                binding.includedLoadingLayout.loadingLayout.visibility = View.VISIBLE
+                //Toast.makeText(requireContext(), "Начата загрузка страницы $url", Toast.LENGTH_SHORT).show()
             }
         }
         binding.webView.clearCache(true)

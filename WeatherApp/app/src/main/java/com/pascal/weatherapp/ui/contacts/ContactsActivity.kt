@@ -14,12 +14,10 @@ import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.pascal.weatherapp.R
 import com.pascal.weatherapp.data.model.Contact
 import com.pascal.weatherapp.databinding.ContactsActivityBinding
-import com.pascal.weatherapp.ui.MainViewModel
 
 
 class ContactsActivity : AppCompatActivity() {
