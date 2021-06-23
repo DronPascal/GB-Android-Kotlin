@@ -116,14 +116,12 @@ class TodayFragment : Fragment() {
                 textviewFeels.text =
                     getString(R.string.template_feels_like).format(it)
             }
-
             // weather icon
             weatherDTO.fact?.icon?.let {
                 val str = YA_ICONS_URI_TEMPLATE.format(it)
                 println(str)
                 binding.imageWeather.load(str, imageLoader)
             }
-
             // current condition
             weatherDTO.fact?.condition?.let {
                 textviewWeatherCondition.text = getString(resFromCondition(it))

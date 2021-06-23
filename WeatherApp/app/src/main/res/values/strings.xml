@@ -21,6 +21,15 @@
     <string name="template_feels_like">Ощущается как %d°</string>
     <string name="template_prec_prob">Вероятность осадков: %d%%</string>
 
+    <!--  Contacts Activity  -->
+    <string name="contacts_title">Поделиться погодой</string>
+    <string name="contacts_permission_dialog_title">Доступ к контактам</string>
+    <string name="contacts_permission_dialog_description">Предоставьте доступ к Вашим контактам чтобы поделиться погодой с друзьями</string>
+    <string name="contacts_permission_dialog_allow">Предоставить доступ</string>
+    <string name="contacts_permission_dialog_deny">Не надо</string>
+    <string name="contacts_denied_dialog_description">Невозможно отправить сообщение без доступа к контактом</string>
+    <string name="contacts_permission_dialog_settings">Настройки</string>
+
     <!--  Conditions Translation  -->
     <string name="condition_blank"> </string>
     <string name="condition_clear">Ясно</string>

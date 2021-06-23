@@ -10,7 +10,7 @@
         android:id="@+id/swipeRefresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:background="@color/lignt_blue_havelock">
+        tools:background="@color/light_blue_havelock">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/contentLayout"
@@ -117,6 +117,6 @@
 
     <include
         android:id="@+id/includedLoadingLayout"
-        layout="@layout/loading_layout" />
+        layout="@layout/all__loading_layout" />
 
 </FrameLayout>

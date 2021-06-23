@@ -9,7 +9,7 @@ import com.pascal.weatherapp.R
  * A [FragmentStateAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
  */
-class FragmentsPagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
+class HomeFragmentsPagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
     companion object {
         val TAB_TITLES = arrayOf(
             R.string.tab_text_today,
