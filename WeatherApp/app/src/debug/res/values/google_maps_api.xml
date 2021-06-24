@@ -4,12 +4,12 @@
 
     To get one, follow this link, follow the directions and press "Create" at the end:
 
-    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=F8:D9:2E:F7:BE:D9:23:40:B7:4F:E7:AB:63:02:49:9D:FF:60:36:DA%3Bcom.pascal.weatherapp.ui.location
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=F8:D9:2E:F7:BE:D9:23:40:B7:4F:E7:AB:63:02:49:9D:FF:60:36:DA%3Bcom.pascal.weatherapp
 
     You can also add your credentials to an existing key, using these values:
 
     Package name:
-    com.pascal.weatherapp.ui.location
+    com.pascal.weatherapp
 
     SHA-1 certificate fingerprint:
     F8:D9:2E:F7:BE:D9:23:40:B7:4F:E7:AB:63:02:49:9D:FF:60:36:DA
