@@ -1,5 +1,6 @@
 package com.pascal.weatherapp.ui.home
 
+import android.app.Activity
 import android.app.SearchManager
 import android.content.*
 import android.net.ConnectivityManager
@@ -18,10 +19,12 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayoutMediator
 import com.pascal.weatherapp.R
 import com.pascal.weatherapp.app.AppState
+import com.pascal.weatherapp.data.model.City
 import com.pascal.weatherapp.databinding.HomeActivityBinding
 import com.pascal.weatherapp.ui.MainViewModel
 import com.pascal.weatherapp.ui.contacts.ContactsActivity
 import com.pascal.weatherapp.ui.home.fragments.HomeFragmentsPagerAdapter
+import com.pascal.weatherapp.ui.location.LocationActivity
 
 
 class HomeActivity : AppCompatActivity() {
@@ -167,10 +170,7 @@ class HomeActivity : AppCompatActivity() {
         if (Intent.ACTION_SEARCH == intent.action) {
             intent.getStringExtra(SearchManager.QUERY)?.also { query ->
                 doSearch(query)
-                with(SearchSuggestionProvider) {
-                    SearchRecentSuggestions(this@HomeActivity, AUTHORITY, MODE)
-                        .saveRecentQuery(query, null)
-                }
+                saveSuggestion(query)
             }
         }
     }
@@ -179,8 +179,47 @@ class HomeActivity : AppCompatActivity() {
         Toast.makeText(this, query, Toast.LENGTH_SHORT).show()
     }
 
+    private fun saveSuggestion(query: String) {
+        with(SearchSuggestionProvider) {
+            SearchRecentSuggestions(this@HomeActivity, AUTHORITY, MODE)
+                .saveRecentQuery(query, null)
+        }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_location -> {
+                val intent = Intent(this, LocationActivity::class.java)
+//                intent.putExtra(ContactsActivity.ARGUMENT_WEATHER_MSG, weatherMsg)
+                startActivityForResult(intent, CITY_REQUEST_CODE)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (resultCode == Activity.RESULT_OK) {
+            when (requestCode) {
+                CITY_REQUEST_CODE -> {
+                    val city = data?.getParcelableExtra<City>(LocationActivity.RESULT_CITY)
+                    city?.let {
+                        println(city)
+                        saveSuggestion(city.city)
+                        mainViewModel.initiateServerWeatherRefresh(city)
+                    }
+                }
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data)
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         unregisterReceiver(connectReceiver)
+    }
+
+    companion object {
+        const val CITY_REQUEST_CODE = 1003
     }
 }

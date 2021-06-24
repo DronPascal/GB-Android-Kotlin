@@ -39,10 +39,9 @@ class MainViewModel(
         initiateTestWeatherRefresh()
     }
 
-    fun initiateServerWeatherRefresh() {
-        City.getDefaultCity().let {
-            weatherRepository.getWeatherDetailsFromServer(WeatherRequest(it.lat, it.lon), callBack)
-        }
+    fun initiateServerWeatherRefresh(city: City = City.getDefaultCity()) {
+        weatherRepository.getWeatherDetailsFromServer(WeatherRequest(city.lat, city.lon), callBack)
+
     }
 
     fun initiateTestWeatherRefresh() {

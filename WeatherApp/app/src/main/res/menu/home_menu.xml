@@ -12,4 +12,12 @@
         app:showAsAction="ifRoom|collapseActionView"
         tools:targetApi="o" />
 
+    <item
+        android:id="@+id/action_location"
+        android:icon="@drawable/ic_location"
+        android:iconTint="?attr/colorOnPrimary"
+        app:showAsAction="always"
+        tools:targetApi="o"
+        android:title="@string/location_description" />
+
 </menu>
