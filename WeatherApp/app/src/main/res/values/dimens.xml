@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--  All  -->
+    <dimen name="tiny_margin" tools:ignore="UnusedResources">4dp</dimen>
+    <dimen name="small_margin" tools:ignore="UnusedResources">8dp</dimen>
+    <dimen name="default_margin" tools:ignore="UnusedResources">16dp</dimen>
+    <dimen name="big_margin" tools:ignore="UnusedResources">24dp</dimen>
+    <dimen name="huge_margin" tools:ignore="UnusedResources">32dp</dimen>
+
+    <dimen name="tiny_padding" tools:ignore="UnusedResources">4dp</dimen>
+    <dimen name="small_padding" tools:ignore="UnusedResources">8dp</dimen>
+    <dimen name="default_padding" tools:ignore="UnusedResources">16dp</dimen>
+    <dimen name="big_padding" tools:ignore="UnusedResources">24dp</dimen>
+    <dimen name="huge_padding" tools:ignore="UnusedResources">32dp</dimen>
+
+    <dimen name="tiny_size" tools:ignore="UnusedResources">8dp</dimen>
+    <dimen name="small_size" tools:ignore="UnusedResources">16dp</dimen>
+    <dimen name="default_size" tools:ignore="UnusedResources">24dp</dimen>
+    <dimen name="big_size" tools:ignore="UnusedResources">36dp</dimen>
+    <dimen name="huge_size" tools:ignore="UnusedResources">48dp</dimen>
+
+</resources>

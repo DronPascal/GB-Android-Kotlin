@@ -1,0 +1,75 @@
+<resources>
+    <!--  All  -->
+    <string name="app_name">Погода</string>
+    <string name="snackbar_check_connection_msg">Проверьте подключение к интернету</string>
+    <string name="close">Закрыть</string>
+
+    <!--  Home Toolbar  -->
+    <string name="search_hint">Поиск мест</string>
+    <string name="location_description">Выбор местоположения</string>
+
+    <!--  Home: Fragment Pager  -->
+    <string name="tab_text_today">Сегодня</string>
+    <string name="tab_text_10days">10 дней</string>
+
+    <!--  Home: Today Fragment  -->
+    <string name="weather_icon_description">Иконка погоды</string>
+    <string name="umbrella_icon_description">Иконка зонтика</string>
+    <string name="fab_icon_description">Поделиться погодой</string>
+
+    <string name="template_day_night">Днем %d° ∙ Ночью %d°</string>
+    <string name="template_cur_temp">%d℃</string>
+    <string name="template_feels_like">Ощущается как %d°</string>
+    <string name="template_prec_prob">Вероятность осадков: %d%%</string>
+
+    <!--  Contacts Activity  -->
+    <string name="contacts_title">Поделиться погодой</string>
+    <string name="contacts_permission_dialog_title">Доступ к контактам</string>
+    <string name="contacts_permission_dialog_description">Предоставьте доступ к Вашим контактам чтобы поделиться погодой с друзьями</string>
+    <string name="contacts_permission_dialog_allow">Предоставить доступ</string>
+    <string name="contacts_permission_dialog_deny">Не надо</string>
+    <string name="contacts_denied_dialog_description">Невозможно отправить сообщение без доступа к контактом</string>
+    <string name="contacts_permission_dialog_settings">Настройки</string>
+
+    <!--  Location Activity  -->
+    <string name="title_activity_location">Карта</string>
+    <string name="my_location_fab_description">Определить текущее местоположение</string>
+    <string name="dialog_button_close">Закрыть</string>
+    <string name="dialog_title_no_gps">Доступ к геолокации закрыт</string>
+    <string name="dialog_message_no_gps">Разрешите доступ к геолокации, если хотите узнать погоду текущего места</string>
+    <string name="dialog_title_gps_turned_off">GPS отключён</string>
+    <string name="dialog_message_last_location_unknown">Местонахождение неизвестно. Включите GPS, если хотите получить погоду по текущему адресу</string>
+    <string name="dialog_message_last_known_location">Показана последняя известная локация. Включите GPS, если хотите обновить местонахождение</string>
+    <string name="dialog_rationale_title">Доступ к геолокации</string>
+    <string name="dialog_rationale_message">Объяснение</string>
+    <string name="dialog_rationale_give_access">Предоставить доступ</string>
+    <string name="dialog_rationale_decline">Не надо</string>
+    <string name="dialog_address_title">Адрес</string>
+    <string name="dialog_address_get_weather">Узнать погоду</string>
+
+    <!--  Conditions Translation  -->
+    <string name="condition_blank"> </string>
+    <string name="condition_clear">Ясно</string>
+    <string name="condition_partly_cloudy">Малооблачно</string>
+    <string name="condition_cloudy">Облачно с прояснениями</string>
+    <string name="condition_overcast">Пасмурно</string>
+    <string name="condition_drizzle">Морось</string>
+    <string name="condition_light_rain">Небольшой дождь</string>
+    <string name="condition_rain">Дождь</string>
+    <string name="condition_moderate_rain">Умеренно сильный дождь</string>
+    <string name="condition_heavy_rain">Сильный дождь</string>
+    <string name="condition_continuous_heavy_rain">Длительный сильный дождь</string>
+    <string name="condition_showers">Ливень</string>
+    <string name="condition_wet_snow">Дождь со снегом</string>
+    <string name="condition_light_snow">Небольшой снег</string>
+    <string name="condition_snow">Снег</string>
+    <string name="condition_snow_showers">Снегопад</string>
+    <string name="condition_hail">Град</string>
+    <string name="condition_thunderstorm">Гроза</string>
+    <string name="condition_thunderstorm_with_rain">Дождь c грозой</string>
+    <string name="condition_thunderstorm_with_hail">Гроза с градом</string>
+    <string name="search_location_hint">Поиск по адресу</string>
+    <string name="search">Search</string>
+
+
+</resources>

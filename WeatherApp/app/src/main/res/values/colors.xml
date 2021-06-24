@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_azure">#396697</color>
+    <color name="blue_danube">#508ACA</color>
+    <color name="blue_chathams">#1E4B7C</color>
+
+    <color name="light_blue_havelock">#498EDA</color>
+    <color name="light_blue_picton">#3AB2E1</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="white_alpha_50">#80FFFFFF</color>
+    <color name="gray_alpha_85">#D9888888</color>
+    <color name="gray_alpha_5">#0D888888</color>
+
+    <color name="san_juan">#2F4A77</color>
+    <color name="chambray">#3A5A8E</color>
+</resources>
