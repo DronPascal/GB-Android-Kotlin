@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -65,10 +66,15 @@ dependencies {
     // Play services
     implementation 'com.google.android.gms:play-services-maps:17.0.1'
 
+    // Firebase
+    implementation 'com.google.firebase:firebase-messaging:22.0.0'
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:28.1.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
     // Room
     implementation 'androidx.room:room-runtime:2.3.0'
-    implementation 'com.google.firebase:firebase-messaging:22.0.0'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.5.10'
     kapt 'androidx.room:room-compiler:2.3.0'
 
     // Coil

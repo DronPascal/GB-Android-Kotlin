@@ -119,7 +119,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         // TODO CONNECTIVITY_ACTION Deprecated
-        val filter = IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
+        @Suppress("DEPRECATION") val filter = IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
         registerReceiver(connectReceiver, filter)
     }
 
@@ -191,6 +191,8 @@ class HomeActivity : AppCompatActivity() {
             R.id.action_location -> {
                 val intent = Intent(this, LocationActivity::class.java)
 //                intent.putExtra(ContactsActivity.ARGUMENT_WEATHER_MSG, weatherMsg)
+                // TODO use activity result API
+                @Suppress("DEPRECATION")
                 startActivityForResult(intent, CITY_REQUEST_CODE)
                 true
             }
@@ -211,6 +213,8 @@ class HomeActivity : AppCompatActivity() {
                 }
             }
         }
+        // TODO use activity result API
+        @Suppress("DEPRECATION")
         super.onActivityResult(requestCode, resultCode, data)
     }
 
