@@ -19,7 +19,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayoutMediator
 import com.pascal.weatherapp.R
 import com.pascal.weatherapp.app.AppState
-import com.pascal.weatherapp.data.model.City
+import com.pascal.weatherapp.data.model.Position
 import com.pascal.weatherapp.databinding.HomeActivityBinding
 import com.pascal.weatherapp.ui.MainViewModel
 import com.pascal.weatherapp.ui.contacts.ContactsActivity
@@ -169,14 +169,17 @@ class HomeActivity : AppCompatActivity() {
     private fun handleIntent(intent: Intent) {
         if (Intent.ACTION_SEARCH == intent.action) {
             intent.getStringExtra(SearchManager.QUERY)?.also { query ->
-                doSearch(query)
-                saveSuggestion(query)
+                val positionFromDB = mainViewModel.getPositionFromDB(query)
+                if (positionFromDB != null) {
+                    mainViewModel.initiateServerWeatherRefresh(positionFromDB)
+                    saveSuggestion(positionFromDB.name)
+                } else {
+                    openMapActivity(query)
+                    Toast.makeText(this, "Unknown position. Searching...", Toast.LENGTH_SHORT)
+                        .show()
+                }
             }
         }
-    }
-
-    private fun doSearch(query: String) {
-        Toast.makeText(this, query, Toast.LENGTH_SHORT).show()
     }
 
     private fun saveSuggestion(query: String) {
@@ -189,26 +192,32 @@ class HomeActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_location -> {
-                val intent = Intent(this, LocationActivity::class.java)
-//                intent.putExtra(ContactsActivity.ARGUMENT_WEATHER_MSG, weatherMsg)
-                // TODO use activity result API
-                @Suppress("DEPRECATION")
-                startActivityForResult(intent, CITY_REQUEST_CODE)
+                openMapActivity()
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
     }
 
+    private fun openMapActivity(searchText: String = "") {
+        val intent = Intent(this, LocationActivity::class.java)
+        intent.putExtra(LocationActivity.ARGUMENT_SEARCH_TEXT, searchText)
+        // TODO use activity result API
+        @Suppress("DEPRECATION")
+        startActivityForResult(intent, POSITION_REQUEST_CODE)
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (resultCode == Activity.RESULT_OK) {
             when (requestCode) {
-                CITY_REQUEST_CODE -> {
-                    val city = data?.getParcelableExtra<City>(LocationActivity.RESULT_CITY)
-                    city?.let {
-                        println(city)
-                        saveSuggestion(city.city)
-                        mainViewModel.initiateServerWeatherRefresh(city)
+                POSITION_REQUEST_CODE -> {
+                    val position =
+                        data?.getParcelableExtra<Position>(LocationActivity.RESULT_POSITION)
+                    position?.let {
+                        println(position)
+                        saveSuggestion(position.name)
+                        mainViewModel.savePositionToDB(position)
+                        mainViewModel.initiateServerWeatherRefresh(position)
                     }
                 }
             }
@@ -224,6 +233,6 @@ class HomeActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val CITY_REQUEST_CODE = 1003
+        const val POSITION_REQUEST_CODE = 1003
     }
 }

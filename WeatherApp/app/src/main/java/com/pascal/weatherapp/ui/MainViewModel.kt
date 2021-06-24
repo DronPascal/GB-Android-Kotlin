@@ -4,8 +4,11 @@ import android.os.Handler
 import android.os.HandlerThread
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.pascal.weatherapp.app.App.Companion.getPositionDao
 import com.pascal.weatherapp.app.AppState
-import com.pascal.weatherapp.data.model.City
+import com.pascal.weatherapp.data.local.PositionRepository
+import com.pascal.weatherapp.data.local.PositionRepositoryImpl
+import com.pascal.weatherapp.data.model.Position
 import com.pascal.weatherapp.data.model.WeatherDTO
 import com.pascal.weatherapp.data.model.WeatherRequest
 import com.pascal.weatherapp.data.model.testWeatherDTO
@@ -23,7 +26,9 @@ class MainViewModel(
     val weatherDtoLiveData: MutableLiveData<WeatherDTO> = MutableLiveData(),
 
     private val weatherRepository: WeatherRepository =
-        WeatherRepositoryImpl(WeatherRemoteDataSource())
+        WeatherRepositoryImpl(WeatherRemoteDataSource()),
+    private val positionRepository: PositionRepository =
+        PositionRepositoryImpl(getPositionDao())
 ) : ViewModel() {
 
     private val handlerThread = HandlerThread("thread")
@@ -39,9 +44,11 @@ class MainViewModel(
         initiateTestWeatherRefresh()
     }
 
-    fun initiateServerWeatherRefresh(city: City = City.getDefaultCity()) {
-        weatherRepository.getWeatherDetailsFromServer(WeatherRequest(city.lat, city.lon), callBack)
-
+    fun initiateServerWeatherRefresh(position: Position = Position.getDefaultPosition()) {
+        weatherRepository.getWeatherDetailsFromServer(
+            WeatherRequest(position.lat, position.lon),
+            callBack
+        )
     }
 
     fun initiateTestWeatherRefresh() {
@@ -51,6 +58,15 @@ class MainViewModel(
             weatherDtoLiveData.postValue(testWeatherDTO)
         }
     }
+
+    fun savePositionToDB(position: Position) {
+        positionRepository.savePosition(position)
+    }
+
+    fun getPositionFromDB(positionName: String): Position? {
+        return positionRepository.findPositionByName("%$positionName%")
+    }
+
 
     private val callBack = object : Callback<WeatherDTO> {
         override fun onResponse(call: Call<WeatherDTO>, response: Response<WeatherDTO>) {

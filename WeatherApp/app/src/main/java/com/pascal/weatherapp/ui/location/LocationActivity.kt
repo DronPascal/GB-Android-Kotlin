@@ -8,6 +8,7 @@ import android.content.pm.PackageManager
 import android.location.*
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -20,7 +21,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 import com.pascal.weatherapp.R
-import com.pascal.weatherapp.data.model.City
+import com.pascal.weatherapp.data.model.Position
 import com.pascal.weatherapp.databinding.LocationActivityBinding
 import java.io.IOException
 
@@ -28,15 +29,17 @@ class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
     private lateinit var binding: LocationActivityBinding
+    private lateinit var searchText: String
 
     @Volatile
-    lateinit var latestCity: City
+    lateinit var latestPosition: Position
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = LocationActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        searchText = intent.extras?.getString(ARGUMENT_SEARCH_TEXT) ?: ""
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
@@ -49,6 +52,7 @@ class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
     private fun initView() {
         initFab()
         initSearchByAddress()
+        initSearchRequest()
     }
 
     private fun initFab() {
@@ -71,6 +75,13 @@ class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
                     e.printStackTrace()
                 }
             }.start()
+        }
+    }
+
+    private fun initSearchRequest() {
+        if (searchText.isNotBlank()) {
+            binding.edittextSearch.setText(searchText, TextView.BufferType.EDITABLE);
+            binding.buttonSearch.performClick()
         }
     }
 
@@ -250,8 +261,8 @@ class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
                 )
                 binding.root.post {
                     val address = addresses[0].getAddressLine(0)
-                    latestCity = City(
-                        city = address,
+                    latestPosition = Position(
+                        name = address,
 //                        with(addresses[0]) {
 //                            when {
 //                                subAdminArea != null -> subAdminArea
@@ -277,7 +288,7 @@ class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
                 .setMessage(address)
                 .setPositiveButton(getString(R.string.dialog_address_get_weather)) { _, _ ->
                     val data = Intent().apply {
-                        putExtra(RESULT_CITY, latestCity)
+                        putExtra(RESULT_POSITION, latestPosition)
                     }
                     if (parent == null) {
                         setResult(Activity.RESULT_OK, data)
@@ -333,6 +344,7 @@ class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
         private const val MINIMAL_DISTANCE = 100f
         private const val LOCATION_REQUEST_CODE = 1002
 
-        const val RESULT_CITY = "result_city"
+        const val RESULT_POSITION = "result_position"
+        const val ARGUMENT_SEARCH_TEXT = "search_text"
     }
 }
