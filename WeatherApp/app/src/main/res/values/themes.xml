@@ -9,6 +9,7 @@
         <item name="colorSecondary">@color/light_blue_picton</item>
         <item name="colorSecondaryVariant">@color/light_blue_havelock</item>
         <item name="colorOnSecondary">@color/white</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/light_blue_picton</item>
         <!-- Customize your theme here. -->
@@ -22,6 +23,5 @@
     <style name="Theme.WeatherApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.WeatherApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
 
 </resources>
