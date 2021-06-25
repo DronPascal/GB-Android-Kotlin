@@ -44,18 +44,21 @@ https://user-images.githubusercontent.com/57148020/123297893-a80c9a00-d520-11eb-
 <img src="https://user-images.githubusercontent.com/57148020/123295240-316e9d00-d51e-11eb-8599-c7582700f7b1.png" width="700">
 
 Описание: Сохранение найденных адресов + координат в бд.
+
 Коммиты: [Added Room implementation](https://github.com/DronPascal/GB-Android-Kotlin/pull/10/commits/2abebba795c4f48f9c470a1ef1b81982865dd212)
 
 ## ДЗ№9
 <img src="https://user-images.githubusercontent.com/57148020/123295538-798dbf80-d51e-11eb-9ffe-de2eefd4d796.png" width="700">
 
 Описание: Добавил возможность отправлять смс с инфой о погоде.
+
 Коммиты: [Added contacts list and weather sharing](https://github.com/DronPascal/GB-Android-Kotlin/pull/10/commits/6751c256ba5179c71bc85924bfc645d276143b31)
 
 ## ДЗ№10
 <img src="https://user-images.githubusercontent.com/57148020/123295807-bce82e00-d51e-11eb-81cc-33367a4b6142.png" width="700">
 
 Описание: Добавил возможность выбора координаты долгим тапом, поиска по адресу, определения собственного местоположения.
+
 Коммиты: [Added google maps screen](https://github.com/DronPascal/GB-Android-Kotlin/pull/10/commits/ee3f792ce81769188e44acbd93d5e86d1219b239)
 
 ## ДЗ№11
@@ -67,4 +70,5 @@ https://user-images.githubusercontent.com/57148020/123297893-a80c9a00-d520-11eb-
 <img src="https://user-images.githubusercontent.com/57148020/123296308-33852b80-d51f-11eb-8067-308d03c367e8.png" width="600">
 
 Описание: Релизный apk лежит в корне репозитория.
+
 Коммиты: [Added release build and properties](https://github.com/DronPascal/GB-Android-Kotlin/pull/10/commits/a73f4ec193fee9ead582ff59a1ce746533c53fdf)
