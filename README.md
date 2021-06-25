@@ -4,8 +4,6 @@
 https://user-images.githubusercontent.com/57148020/123297893-a80c9a00-d520-11eb-954f-a86cc1849227.mp4
 
 ## ДЗ№3 (UI/UX)
-<img src="https://user-images.githubusercontent.com/57148020/123289324-0afa3300-d519-11eb-8122-9dcced7bb510.png" width="600">
-
 Описание: UI постоянно дорабатывался, но база была заложена в первом коммите. 
 Коммиты: [99ce93a](https://github.com/DronPascal/GB-Android-Kotlin/pull/10/commits/99ce93a98503b605af7fedf0070ebceafbadaaa8), [693aace](https://github.com/DronPascal/GB-Android-Kotlin/pull/10/commits/693aaceff66459a114c61eaf7fa34296feebf787), [2144e2d](https://github.com/DronPascal/GB-Android-Kotlin/pull/10/commits/2144e2dbe69e0c5efebfd59bba1db1ecf3f90ebf), [f875dfc](https://github.com/DronPascal/GB-Android-Kotlin/pull/10/commits/f875dfcdd2c613ab21cca717731eef90d268f49c), [3ed0896](https://github.com/DronPascal/GB-Android-Kotlin/pull/10/commits/3ed08962adb49e03c050b86df5818c07d5d1ec09) + по мелочи в каждом коммите
 Финальный вид приложения:
