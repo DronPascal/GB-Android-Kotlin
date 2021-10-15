@@ -1,4 +1,8 @@
-# GB-Android-Kotlin
+# 🌦️ WeatherApp. GB-Android-Kotlin
+### Architecture:
+MVVM
+### Libraries: 
+ViewModel, LiveData, Room, Coil, Google Maps API, Firebase notification.
 Видео работы приложения:
 
 https://user-images.githubusercontent.com/57148020/123297893-a80c9a00-d520-11eb-954f-a86cc1849227.mp4
